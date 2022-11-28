@@ -157,7 +157,7 @@ export default function MiniDrawer() {
           </Typography>
           <div>
             
-            <Box sx={{ position:'relative', left:830}}>
+            <Box sx={{ position:'relative', left:500}}>
             <Typography variant="subtitle" > Welcome, {firstname} {lastname} </Typography>
                 <IconButton
                   size='large'
