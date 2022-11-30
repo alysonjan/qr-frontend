@@ -153,7 +153,7 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" >
-          SWU CITE QR Attendance Monitoring System 
+          Attendance QR Code Generator for SWU-CITE
           </Typography>
           <div>
             

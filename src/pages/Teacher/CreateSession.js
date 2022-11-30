@@ -22,13 +22,12 @@ const CreateSession = () => {
       alert(err.message)
     }
     }
-
-    const interval=setInterval(()=>{
-        getSession()
-    },60000)
-
-      return()=>clearInterval(interval)
+    getSession()
   },[])
+
+  setInterval(() => {
+    window.location.reload(false);
+  }, 10000);
 
 
   const handleCloseSession = async(id) => {
@@ -51,6 +50,8 @@ const CreateSession = () => {
     } catch (err) {
       alert(err.response.data.msg)
     }
+
+
 
   }
   return (

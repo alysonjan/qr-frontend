@@ -1,4 +1,4 @@
-import { Button, Paper, Typography } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -27,7 +27,7 @@ const MainPage = () => {
       >
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <Typography variant="h4" color="#ffff" sx={{ mb: 2, fontFamily: 'DM Sans' }}>
-          SWU CITE QR Attendance Monitoring System
+          Attendance QR Code Generator for SWU-CITE
         </Typography>
       </Box>
       <img src="logobob.png" alt="bob" width="500" height="400"></img>         
