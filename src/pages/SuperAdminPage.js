@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField'
 import { Button, MenuItem, Paper, Typography } from '@mui/material'
 import axiosInstance from '../helpers/axios'
 import { Auth } from '../context/AuthContext'
+import NumberFormat from 'react-number-format';
 
 const SuperAdminPage = () => {
   const [employeeID, setEmployeeID] = useState('');
@@ -43,7 +44,7 @@ const SuperAdminPage = () => {
         alert("Password doesn't match")
       }
     } catch (err) {
-      alert(err.response.data.msg)
+      alert(err.response.data.message)
     }
   }
   return (
@@ -85,7 +86,7 @@ const SuperAdminPage = () => {
                 flexDirection: 'column',
               }}
             >
-              <TextField
+              {/* <TextField
                 id="employeeid"
                 label="Employee ID"
                 variant="outlined"
@@ -94,7 +95,19 @@ const SuperAdminPage = () => {
                 required
                 value={employeeID}
                 onChange={(e) => setEmployeeID(e.target.value)}
-              />
+              /> */}
+              <NumberFormat 
+              customInput={TextField}
+              format="#-###-###"
+              name="employeeid"
+              label="Employee ID"
+              variant="outlined"
+              size="small"
+              sx={{ mb: 2 }}
+              onChange={(e) => setEmployeeID(e.target.value)}
+              required
+              value={employeeID}
+              /> 
               <TextField
                 id="firstname"
                 label="Firstname"

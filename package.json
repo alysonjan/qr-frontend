@@ -26,6 +26,7 @@
     "install": "^0.13.0",
     "js-file-download": "^0.4.12",
     "material-table": "^2.0.3",
+    "react-number-format": "^4.9.3",
     "npm": "^8.17.0",
     "qrcode": "^1.5.1",
     "react": "^18.2.0",

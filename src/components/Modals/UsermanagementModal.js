@@ -4,6 +4,7 @@ import DialogTitle from '@mui/material/DialogTitle'
 import { MenuItem, TextField } from '@mui/material'
 import { Box } from '@mui/system'
 import axiosInstance from '../../helpers/axios'
+import NumberFormat from 'react-number-format'
 
 export default function UsermanagementModal({
   open,
@@ -51,7 +52,7 @@ export default function UsermanagementModal({
         <DialogTitle id="alert-dialog-title">{'Add New User'}</DialogTitle>
         <Box sx={{ p: 2 }}>
           <form onSubmit={handleSubmit}>
-            <TextField
+            {/* <TextField
               id="employee_id"
               label="Employee ID"
               fullWidth
@@ -61,7 +62,20 @@ export default function UsermanagementModal({
               value={employee_id}
               onChange={(e) => onChange(e)}
               required
-            />
+            /> */}
+            <NumberFormat
+              customInput={TextField}
+              format="#-###-###"
+              label="Employee ID"
+              variant="outlined"
+              fullWidth
+              size="small"
+              sx={{ mb: 2 }}
+              required
+              name="employee_id"
+              value={employee_id}
+              onChange={(e) => onChange(e)}
+              /> 
             <TextField
               id="firstname"
               label="Firstname"

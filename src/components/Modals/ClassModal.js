@@ -188,15 +188,14 @@ export default function ClassModal({
     getStudent()
     getSubject()
   }, [])
-
-  const subjectName = subjectList.find((subj) => sub_id === subj.sub_id)
+  const subjectName = subjectList?.find((subj) => sub_id === subj.sub_id)
 
   const handleStudentIdChange = (e) => {
     const index = studentID.indexOf(e.target.value)
     if (index === -1) {
       setStudentID([...studentID, e.target.value])
     } else {
-      setStudentID(studentID.filter((ids) => ids !== e.target.value))
+      setStudentID(studentID?.filter((ids) => ids !== e.target.value))
     }
   }
 
@@ -395,7 +394,7 @@ export default function ClassModal({
                     size="small"
                   >
                     {subjectList &&
-                      subjectList.map((item) => {
+                      subjectList?.map((item) => {
                         return (
                           <MenuItem key={item.sub_id} value={item.sub_id}>
                             {item.sub_desc}
@@ -764,8 +763,7 @@ export default function ClassModal({
                   onChange={handleFile} ></input>                  
                   {excelFileError&&<div className='text-danger'
                   style={{marginTop:'2px'}}>{excelFileError}</div>}
-                  <button type='submit' className='btn btn-success'
-                  style={{marginTop:5+'px'}} onClick={handleSubmitExcel}>Import</button>
+                  <button type='submit' className='btn btn-success' style={{marginTop:5+'px'}} onClick={handleSubmitExcel}>Import</button>
                   <Paper
                     elevation={2}
                     sx={{ mt:2, p: 1, height: '300px', overflow: 'auto' }}

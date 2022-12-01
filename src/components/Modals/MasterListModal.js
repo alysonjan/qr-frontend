@@ -6,6 +6,7 @@ import { TextField } from '@mui/material'
 import { Box } from '@mui/system'
 import QRCode from 'qrcode'
 import axiosInstance from '../../helpers/axios'
+import NumberFormat from 'react-number-format';
 
 export default function AddNewStudentModal({
   open,
@@ -98,9 +99,9 @@ export default function AddNewStudentModal({
               onChange={(e) => onChange(e)}
               required
             />
-            <TextField
+            {/* <TextField
               id="student_id"
-              label="ID number"
+              label="Student Number"
               fullWidth
               size="small"
               sx={{ mb: 2 }}
@@ -108,7 +109,20 @@ export default function AddNewStudentModal({
               value={student_id}
               onChange={(e) => onChange(e)}
               required
-            />
+            /> */}
+            <NumberFormat 
+              customInput={TextField}
+              format="##-####-#####"
+              name="student_id"
+              label="Student Number"
+              fullWidth
+              variant="outlined"
+              size="small"
+              sx={{ mb: 2 }}
+              value={student_id}
+              onChange={(e) => onChange(e)}
+              required
+              /> 
             <TextField
               id="email"
               label="Email"
