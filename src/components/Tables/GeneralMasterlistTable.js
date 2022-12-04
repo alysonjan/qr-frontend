@@ -56,6 +56,7 @@ const GeneralMasterlistTable = () => {
     getData()
   }, [])
   const [changeTrigger, setChangeTrigger] = useState(false);
+  
   const generateQR = async (rowdata) => {
     try {
       console.log("TRIGGER",rowdata)
